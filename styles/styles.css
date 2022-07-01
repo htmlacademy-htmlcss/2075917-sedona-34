@@ -12,7 +12,13 @@
   src: url("fonts/pt-sans-bold.woff2") format("woff2");
   font-display: swap;
 }
+html {
+  height: 100%;
+}
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -34,6 +40,24 @@ button{
   color: #000000;
   background-color: #FFFFFF;
 }
+.navigation {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+.navigation-list {
+  margin: 0;
+  padding: 0;
+  width: 500px;
+}
+.navigation-user {
+  max-width: 320px;
+  margin-left: auto;
+}
+.navigation-logo {
+  width: 140px;
+  margin-right: 70px;
+}
 .navigation-link {
   line-height: 26px;
   color: #000000;
@@ -43,9 +67,37 @@ button{
   text-decoration: none;
   text-transform: uppercase;
 }
+.main-container {
+  flex-grow: 1;
+}
 .main-index {
   color: #000000;
   background-color: #ffffff;
+  background-image: url('../images/bg-back-desktop.jpg');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+.logo {
+  display: block;
+  margin: 0 auto;
+}
+.advantages-list-image {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.advantages-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 .main-hidden{
   font-size: 30px;
@@ -60,6 +112,14 @@ button{
   text-transform: uppercase;
   text-align: center;
   font-weight: 400;
+}
+.advantages-item {
+  width: 400px;
+  padding: 0 85px;
+}
+.advantages-hidden{
+  width: 800px;
+  padding: 0 0;
 }
 .advantages-title{
   font-size: 24px;
@@ -97,16 +157,24 @@ button{
   font-weight: 400;
 }
 .page-footer-section{
-  background-image: url("images/footer-background.jpg");
   color: #FFFFFF ;
   background-color: #000000;
+  background-image: url('../images/footer-background.jpg');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
   text-align: center;
+  min-height: 400px;
 }
 .page-footer-title{
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
+}
+.page-footer-container {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
 }
 .footer-description{
   font-size: 22px;
@@ -128,7 +196,16 @@ button{
   text-decoration: none;
   text-transform: uppercase;
 }
-
+.footer-social-list{
+  width: 200px;
+  margin-right: 130px;
+  padding: 0 75px;
+}
+.htmlacademy-link{
+  margin-left: auto;
+  max-width: 120px;
+  padding: 0 75px;
+}
 .inner-header-title {
   font-size: 60px;
   line-height: 78px;
@@ -141,6 +218,12 @@ button{
 /* Link */
 .breadcrumbs-link {
   color: inherit;
+}
+.catalog-filter {
+  display: flex;
+  margin: 0 auto;
+  width: 370px;
+  margin-left: 70px;
 }
 .catalog-filter-title {
   font-size: 20px;
