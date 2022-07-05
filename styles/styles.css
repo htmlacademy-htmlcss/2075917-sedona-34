@@ -16,14 +16,24 @@ html {
   height: 100%;
 }
 body {
-  margin: 0;
   display: flex;
   flex-direction: column;
+  margin: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   color: #000000;
   background-color: #FFFFFF;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 button{
   font-family: inherit;
@@ -46,19 +56,31 @@ button{
   margin: 0 auto;
 }
 .navigation-list {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   width: 500px;
+  list-style-type: none;
 }
 .navigation-user {
   max-width: 320px;
   margin-left: auto;
 }
+.navigation-user .navigation-link {
+  min-width: 42px;
+  min-height: 66px;
+}
+
 .navigation-logo {
   width: 140px;
-  margin-right: 70px;
+  margin-right: 30px;
+  margin-left: 70px;
+  list-style-type: none;
 }
 .navigation-link {
+  display: block;
+  padding: 20px 16px;
   line-height: 26px;
   color: #000000;
   font-weight: 700;
@@ -70,12 +92,13 @@ button{
 .main-container {
   flex-grow: 1;
 }
-.main-index {
-  color: #000000;
-  background-color: #ffffff;
-  background-image: url('../images/bg-back-desktop.jpg');
-  background-size: 100% auto;
-  background-repeat: no-repeat;
+.sedona-welcome {
+  background-image:url('../images/bg-triangle-desktop.svg'), url('../images/bg-back-desktop.jpg');
+  background-size: contain, auto;
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom, top ;
+  padding-top: 51px;
+  padding-bottom: 82px;
 }
 .page-container {
   width: 1200px;
@@ -91,6 +114,7 @@ button{
   margin: 0;
   padding: 0;
   text-align: center;
+  list-style-type: none;
 }
 .advantages-list {
   display: flex;
@@ -98,8 +122,11 @@ button{
   margin: 0;
   padding: 0;
   text-align: center;
+  list-style-type: none;
 }
 .main-hidden{
+  padding-top: 63px;
+  padding-bottom: 31px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -107,6 +134,7 @@ button{
   text-align: center;
 }
 .main-description{
+  margin-bottom: 90px;
   font-size: 22px;
   line-height: 26px;
   text-transform: uppercase;
@@ -114,14 +142,20 @@ button{
   font-weight: 400;
 }
 .advantages-item {
+  padding: 92px 85px;
   width: 400px;
-  padding: 0 85px;
+  background-color: #83B3D3;
+  color: #FFFFFF;
 }
 .advantages-hidden{
   width: 800px;
   padding: 0 0;
+  background-color: #82B3D3;
+  color: #FFFFFF;
 }
 .advantages-title{
+  margin: 0;
+  margin-bottom: 15px;
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
@@ -129,19 +163,13 @@ button{
   font-weight: 700;
 }
 .advantages-description{
+  margin: 0;
+  padding: 15px;
   font-size: 18px;
   line-height: 21px;
   text-transform: uppercase;
   text-align: center;
   font-weight: 400;
-}
-.advantages-hidden{
-  background-color: #82B3D3;
-  color: #FFFFFF;
-}
-.advantages-item{
-  background-color: #83B3D3;
-  color: #FFFFFF;
 }
 .appointment{
   text-transform: uppercase;
@@ -150,6 +178,9 @@ button{
   text-align: center;
   font-weight: 700;
 }
+.appointment-title{
+  margin-top: 90px;
+}
 .appointment-call{
   font-size: 22px;
   line-height: 26px;
@@ -157,6 +188,7 @@ button{
   font-weight: 400;
 }
 .page-footer-section{
+  padding: 94px 0;
   color: #FFFFFF ;
   background-color: #000000;
   background-image: url('../images/footer-background.jpg');
@@ -166,12 +198,15 @@ button{
   min-height: 400px;
 }
 .page-footer-title{
+  margin: 0;
+  margin-bottom: 29px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
 }
 .page-footer-container {
+  padding: 45px 0;
   display: flex;
   width: 1200px;
   margin: 0 auto;
@@ -197,26 +232,51 @@ button{
   text-transform: uppercase;
 }
 .footer-social-list{
+  display: flex;
+  flex-wrap: wrap;
   width: 200px;
   margin-right: 130px;
   padding: 0 75px;
+  margin: 0;
+  list-style-type: none;
+}
+.footer-social-item {
+  width: 48px;
+  height: 40px;
 }
 .htmlacademy-link{
   margin-left: auto;
   max-width: 120px;
   padding: 0 75px;
 }
+.inner-filter{
+  padding: 0;
+  color: #FFFFFF ;
+  background-color: #000000;
+  background-image: url('../images/background-catalog.jpg');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  min-height: 400px;
+}
 .inner-header-title {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  margin-left: 70px;
   font-size: 60px;
   line-height: 78px;
   text-transform: uppercase;
 }
 .breadcrumbs {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  margin-left: 72px;
   color: #ffffff;
+  list-style-type: none;
 }
-
 /* Link */
 .breadcrumbs-link {
+  margin-right: 26px;
   color: inherit;
 }
 .catalog-filter {
@@ -229,7 +289,8 @@ button{
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
-  color: #000000;
+  color: #ffffff;
+  list-style-type: none;
 }
 
 /* Label */
@@ -237,12 +298,24 @@ button{
   font-weight: 700;
 }
 .sorting-container {
+  display: flex;
+  margin-bottom: 16px;
   color: #000000;
   background-color: #ffffff;
+}
+
+.sorting-container .button {
+  width: 48px;
+  height: 48px;
 }
 .button-light{
   color: #000000;
   background-color: #ffffff;
+}
+.product-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 .product-card{
   background-color: #ffffff;
@@ -262,15 +335,35 @@ button{
   color: #000000;
   text-transform: uppercase;
 }
-.pagination{
+.pagination-container {
+  display: flex;
+  padding: 25px;
   background-color: #ffffff;
 }
+.pagination {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.pagination-item:not(:last-child) {
+  margin-right: 8px;
+}
 .pagination-link {
+  display: block;
+  box-sizing: border-box;
+  width: 60px;
+  height: 60px;
+  padding: 14px 20px;
   color: #ffffff;
   background-color: #82B3D3;
   text-decoration: none;
   line-height: 36px;
   font-weight: 700;
+}
+.pagination-show-more {
+  display: flex;
+  margin-left: auto;
 }
 .pagination-current{
   color: #000000;
