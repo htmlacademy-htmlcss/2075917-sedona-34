@@ -12,6 +12,10 @@
   src: url("fonts/pt-sans-bold.woff2") format("woff2");
   font-display: swap;
 }
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
 html {
   height: 100%;
 }
@@ -35,7 +39,7 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-button{
+.button{
   font-family: inherit;
   font-size: 16px;
   line-height: 20px;
@@ -46,6 +50,9 @@ button{
   text-decoration: none;
   text-transform: uppercase;
 }
+.product-card-description{
+    background-color: #756157;
+  }
 .page-header {
   color: #000000;
   background-color: #FFFFFF;
@@ -99,10 +106,6 @@ button{
   background-position: bottom, top ;
   padding-top: 51px;
   padding-bottom: 82px;
-}
-.page-container {
-  width: 1200px;
-  margin: 0 auto;
 }
 .logo {
   display: block;
@@ -195,7 +198,6 @@ button{
   background-size: 100% auto;
   background-repeat: no-repeat;
   text-align: center;
-  min-height: 400px;
 }
 .page-footer-title{
   margin: 0;
@@ -249,12 +251,16 @@ button{
   max-width: 120px;
   padding: 0 75px;
 }
+.page-container{
+  width: 1056px;
+  margin: 0 auto;
+}
 .inner-filter{
   padding: 0;
   color: #FFFFFF ;
   background-color: #000000;
   background-image: url('../images/background-catalog.jpg');
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
   min-height: 400px;
 }
@@ -290,9 +296,7 @@ button{
   line-height: 26px;
   font-weight: 700;
   color: #ffffff;
-  list-style-type: none;
 }
-
 /* Label */
 .control-label {
   font-weight: 700;
@@ -313,26 +317,65 @@ button{
   background-color: #ffffff;
 }
 .product-list {
+  display: grid;
+  grid-template-columns: 340px 340px 340px;
   list-style-type: none;
   margin: 0;
   padding: 0;
+  gap: 0 20px;
 }
 .product-card{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
   background-color: #ffffff;
 }
 .product-card-link {
   text-decoration: none;
 }
 .product-card-title{
+  margin-bottom: 16px;
+  margin: 0;
+  padding: 0;
+  color: #000000;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
 }
+.product-card-title-link{
+  margin-top: 16px;
+  margin-bottom: 16px;
+  text-decoration: none;
+}
 .product-card-price{
+  margin-bottom:16px;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   color: #000000;
+  text-transform: uppercase;
+}
+.hotel-description{
+  display: flex;
+  flex-grow: 1;
+}
+.hotel-booking{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 140px;
+  margin-left: auto;
+}
+.hotel-info{
+  width: 140px;
+  margin-right: 20px;
+}
+.hotel-text{
+  margin: 0;
+  padding: 0;
+  margin-bottom: 15px;
+}
+.hotel-rating-text{
   text-transform: uppercase;
 }
 .pagination-container {
@@ -368,4 +411,11 @@ button{
 .pagination-current{
   color: #000000;
   background-color: #F2F2F2;
+}
+.select-control-title{
+  margin-right: 50px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
 }
