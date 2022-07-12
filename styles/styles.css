@@ -2,7 +2,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/pt-sans-regular.woff2") format("woff2");
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -10,7 +10,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/pt-sans-bold.woff2") format("woff2");
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -40,6 +40,7 @@ body {
   color: #000000;
   background-color: #FFFFFF;
   min-height: 100%;
+  min-width: 1200px;
 }
 
 img {
@@ -699,7 +700,6 @@ img {
 
 /* ширина модального окна */
 .modal-search {
-  width: 715px;
   border-radius: 30px;
 }
 
@@ -957,7 +957,7 @@ img {
 }
 
 /* кнопка "-"(взрослые) */
-.modal-minus-adults-butto {
+.modal-minus-adults-button {
   position: absolute;
   top: 195px;
   left: 170px;
@@ -969,7 +969,7 @@ img {
 }
 
 /* кнопка "+"( взрослых )*/
-.modal-plus-adults-butto {
+.modal-plus-adults-button {
   position: absolute;
   top: 195px;
   left: 250px;
@@ -1188,6 +1188,14 @@ img {
   margin-top: 40px;
 }
 
+.catalog-filters-group {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: flex-end;
+}
+
 /* заголовки фильтров */
 .catalog-filters-title {
   font-weight: 700;
@@ -1198,14 +1206,6 @@ img {
   display: flex;
   align-items: flex-end;
   color: #ffffff;
-}
-
-.catalog-filters-group {
-  border: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  align-items: flex-end;
 }
 
 .catalog-filters-list {
@@ -1219,13 +1219,19 @@ img {
 }
 
 .catalog-filters-group-infrastructure {
-  margin-right: 72px;
+  margin-right: 70px;
 }
 
 /* отступы чек-боксы и радиокнопки */
 .control {
   position: relative;
   padding-left: 39px;
+}
+
+.control.disabled {
+  pointer-events: none;
+  opacity: 30%;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 /* квадрат чекбокс */
@@ -1482,7 +1488,21 @@ img {
   margin-top: 20px;
 }
 
+/* наведение курсора */
+.button-cancel:hover {
+  opacity: 60%;
+}
 
+/* фокусирование через таб */
+.button-cancel:focus {
+  outline: 3px solid #83B3D3;
+  border-radius: 4px;
+}
+
+/* нажатие */
+.button-cancel:active {
+  opacity: 30%;
+}
 
 
 
@@ -1499,8 +1519,6 @@ img {
 
 .sorting-container {
   display: flex;
-  color: #000000;
-  background-color: #ffffff;
 }
 
 /* найдено гостиниц */
@@ -1513,14 +1531,13 @@ img {
   line-height: 36px;
   text-transform: uppercase;
   margin-right: auto;
+  white-space: nowrap;
 }
 
 /* сортировка гостиниц */
 .select-control-type {
   margin: 0;
   font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
   color: #333333;
   align-self: center;
   width: 290px;
@@ -1528,10 +1545,29 @@ img {
   margin-right: 80px;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  appearance: none;
+  background-image: url("../images/arrow-down.svg");
+  background-position: right 18px center;
+  background-repeat: no-repeat;
 }
 
 .select-control-type:hover {
   border: 2px solid #68A2CA;
+}
+
+/* фокус */
+.select-control-type:focus {
+  border: 2px solid #68A2CA;
+  outline: none;
+}
+
+/* нажатие */
+.select-control-type:focus-visible {
+  border: 2px solid #3F5E72;
+  outline: none;
 }
 
 /* кнопки отображения карточек */
@@ -1566,103 +1602,144 @@ img {
   margin-right: 10px;
 }
 
-.product-list {
-  display: grid;
-  grid-template-columns: 340px 340px 340px;
+
+/* Список гостиниц */
+.hotels-list {
   list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  padding: 55px 0 66px;
+  border-bottom: 1px solid #E6E6E6;
+  gap: 0 18px;
   margin: 0;
-  padding: 0;
-  gap: 0 20px;
 }
 
-.product-card {
-  width: 340px;
+
+/* размеры карточки с внутренними отступами */
+.hotel-card {
+  width: 300px;
   padding: 20px;
 }
 
 /* ссылка на гостиницу */
-.product-card-link {
+.hotel-card-link {
   text-decoration: none;
   color: inherit;
 }
 
 /* наведение курсора */
-.product-card-link:hover {
+.hotel-card-link:hover {
   color: #756157;
+  transition: 0.5s;
 }
 
 /* фокусирование через таб */
-.product-card-link:focus {
+.hotel-card-link:focus {
   color: #756157;
+  transition: 0.5s;
 }
 
 /* нажатие */
-.product-card-link:active {
+.hotel-card-link:active {
   color: #7561574D;
   opacity: 30%;
 }
 
+/* выключенный */
+.hotel-card.disabled {
+  opacity: 30%;
+  pointer-events: none;
+}
+
 /* отступ между фото отеля и названием */
-.product-card-image {
+.hotel-card-image {
   margin-bottom: 10px;
 }
 
 /* название гостиинцы */
-.product-card-title {
+.hotel-card-title {
   font-size: 24px;
   line-height: 28px;
   margin: 0;
   margin-bottom: 16px;
+  box-sizing: border-box;
 }
 
-.product-card-row {
+/* строка с подробностями о гостинице */
+.hotel-card-row {
   display: flex;
-  justify-content: space-between
+  justify-content: space-between;
 }
 
-/* отступы для строк */
-.product-card-row:not(:last-child) {
+/* отступы для строк карточки */
+.hotel-card-row:not(:last-child) {
   margin-bottom: 16px;
 }
 
-.product-type {
+/* темный шрифт для подробностей карточки */
+.hotel-type {
   color: #333333;
   width: 140px;
 }
 
-/* цена */
-.product-price {
+/* цена номера */
+.hotel-price {
   color: #333333;
   width: 140px;
 }
 
-/* подробнее */
-.product-details {
+/* кнопка подробнее */
+.hotel-details {
   width: 140px;
   padding: 9px 15px;
+  box-sizing: border-box;
 }
 
-/* в избранное */
-.product-favourites {
+/* кнопка в избранное */
+.hotel-favourites {
   width: 140px;
   padding: 9px 15px;
   background-color: #82B3D3;
 }
 
-/* зеленая кнопка */
-.product-favourites-checked {
+/* кнопка в избранном */
+.hotel-favourites-checked {
   background-color: #7DB54F;
 }
 
+/*кнопка добавленного в избранное, зелёная */
+/* наведение курсора */
+.button-favourites:hover {
+  background-color: #6C9E42;
+  transition: 0.5s;
+}
+
+/* фокусирование через таб */
+.button-favourites:focus {
+  background-color: #6C9E42;
+  transition: 0.5s;
+}
+
+/* нажатие */
+.button-favourites:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* выключенный */
+.button-favourites.disabled {
+  background-color: #E5E5E5;
+  pointer-events: none;
+}
+
 /* блок со звёздочками отеля*/
-.product-card-stars {
+.hotel-card-stars {
   width: 140px;
   display: flex;
   align-items: center;
 }
 
 /* численный рейтинг отеля */
-.product-rating {
+.hotel-rating {
   width: 140px;
   padding: 9px 15px;
   font-size: 16px;
@@ -1670,48 +1747,153 @@ img {
   font-weight: 400;
   background-color: #F2F2F2;
   color: #333333;
+  box-sizing: border-box;
 }
 
-.product-stars:not(:last-child) {
+/* кнопка рейтинга */
+/* наведение курсора */
+.button-rating:hover {
+  background-color: transparent;
+  transition: 0.5s;
+}
+
+/* фокусирование через таб */
+.button-rating:focus {
+  background-color: transparent;
+  transition: 0.5s;
+}
+
+/* нажатие */
+.button-rating:active {
+  opacity: 30%;
+  background-color: transparent;
+}
+
+/* выключенный */
+.button-rating.disabled {
+  background-color: #E5E5E5;
+  pointer-events: none;
+}
+
+/* отступ менжду звёздочками */
+.hotel-stars:not(:last-child) {
   margin-right: 6px;
 }
 
+/* Пагинация */
+
 .pagination-container {
   display: flex;
-  padding: 25px;
+  margin-top: 28px;
   background-color: #ffffff;
 }
 
 .pagination {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style-type: none;
+  max-width: 400px;
 }
 
+.pagination-item {
+  margin-right: 8px;
+  background-color: #82B3D3;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  max-width: 60px;
+}
+/* отступ менжду страницами пагинации */
 .pagination-item:not(:last-child) {
   margin-right: 8px;
 }
 
+/* ссылки кнопки пагинации */
 .pagination-link {
-  display: block;
-  box-sizing: border-box;
-  width: 60px;
-  height: 60px;
-  padding: 14px 20px;
-  color: #ffffff;
-  background-color: #82B3D3;
   text-decoration: none;
-  line-height: 36px;
-  font-weight: 700;
-}
-
-.pagination-show-more {
+  color: white;
+  min-width: 60px;
+  padding: 12px 18px;
   display: flex;
-  margin-left: auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 4px;
 }
 
-.pagination-current {
-  color: #000000;
+/* текущая страница в пагинации */
+.pagination-item-selected {
   background-color: #F2F2F2;
+}
+
+/* переделать */
+.pagination-link-selected {
+  color: black;
+}
+
+/* гостиниц на странице */
+.select-control-title {
+  margin: 0;
+}
+
+/* переделать */
+.select-control-title {
+  display: block;
+  align-self: center;
+  margin-left: auto;
+  width: 175px;
+  height: 21px;
+  color: #333333;
+}
+
+/* количество гостиниц на странице */
+.select-control {
+  width: 160px;
+  align-self: center;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+  margin-left: 51px;
+  font-family: "PT sans", sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  color: #333333;
+  padding: 12px 19px;
+  appearance: none;
+  -moz-appearance: none;
+  background-image: url("../images/arrow-down.svg");
+  background-position: right 18px center;
+  background-repeat: no-repeat;
+}
+
+/* наведение курсора */
+.select-control:hover {
+  border: 2px solid #68A2CA;
+  transition: 0.5s;
+}
+
+/* фокусирование через таб */
+.select-control:focus {
+  border: 2px solid #68A2CA;  /* не работает */
+  transition: 0.5s;
+}
+
+/* нажатие */
+.select-control:focus-visible {
+  border: 2px solid #3F5E72;
+  outline: none;
+}
+
+/* выключенный */
+.select-control:disabled {
+  opacity: 30%;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+/* текст раздела рассылки на странице каталога */
+.newsletter-text-catalog {
+  color: #333333;
 }

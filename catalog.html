@@ -89,28 +89,28 @@
               <h2 class="visually-hidden" hidden>Список товаров с фильтрами</h2>
               <form class="catalog-filters" action="https://echo.htmlacademy.ru/" method="get">
                 <!-- инфраструктура -->
-                <fieldset class="catalog-filters-group catalog-filter-group-infrastructure">
+                <fieldset class="catalog-filters-group">
                   <legend class="catalog-filters-title">Инфраструктура:</legend>
                   <ul class="catalog-filters-list">
                     <li class="catalog-filters-item">
-                      <label class="control">
+                      <label class="control disabled">
                         <input class="visually-hidden control-input" type="checkbox" name="swimming-pool" checked>
                         <span class="control-mark"></span>
-                        Бассейн
+                        <span class="control-label">Бассейн</span>
                       </label>
                     </li>
                     <li class="catalog-filters-item">
                       <label class="control">
                         <input class="visually-hidden control-input" type="checkbox" name="parking" checked>
                         <span class="control-mark"></span>
-                        Парковка
+                        <span class="control-label">Парковка</span>
                       </label>
                     </li>
                     <li class="catalog-filter-item">
                       <label class="control">
                         <input class="visually-hidden control-input" type="checkbox" name="Wi-fi">
                         <span class="control-mark"></span>
-                        Wi-Fi
+                        <span class="control-label">Wi-Fi</span>
                       </label>
                     </li>
                   </ul>
@@ -123,23 +123,23 @@
                       <label class="control">
                         <input class="visually-hidden control-input" type="radio" name="product-group" value="Hotel"
                           checked>
-                          <span class="control-mark"></span>
-                          Гостиница
+                        <span class="control-mark"></span>
+                        <span class="control-label">Гостиница</span>
                       </label>
                     </li>
                     <li class="catalog-filters-item">
-                      <label class="control">
+                      <label class="control disabled">
                         <input class="visually-hidden control-input" type="radio" name="product-group" value="Motel">
                         <span class="control-mark"></span>
-                        Мотель
+                        <span class="control-label">Мотель</span>
                       </label>
                     </li>
                     <li class="catalog-filters-item">
                       <label class="control">
                         <input class="visually-hidden control-input" type="radio" name="product-group"
                           value="apartments">
-                          <span class="control-mark"></span>
-                          Апартаменты
+                        <span class="control-mark"></span>
+                        <span class="control-label">Апартаменты</span>
                       </label>
                     </li>
                   </ul>
@@ -170,15 +170,17 @@
                 <!-- кнопки применить, сбросить -->
                 <section class="button-submit">
                   <button class="button button-apply button-second" type="submit">Применить</button>
-                  <button class="button button-cancel" type="reset">Сбросить</button>
+                  <button class="button button-cancel button-rating" type="reset">Сбросить</button>
                 </section>
               </form>
             </section>
           </div>
+
           <!-- найденные гостиницы -->
           <section class="catalog-main">
             <div class="sorting-container">
               <span class="select-control-title">Найдено гостиниц: 38</span>
+
               <!-- сортировка -->
               <select class="select-control-type">
                 <option value="popular">Сначала популярное</option>
@@ -221,141 +223,148 @@
                 <span class="visually-hidden">Показать список</span>
               </a>
             </div>
+
             <!-- список гостиниц -->
-            <ul class="product-list">
-              <li class="product-card">
-                <a class="product-card-link" href="product.html">
-                  <img class="product-card-image" src="./images/hotel-1.jpg" width="300" height="211" alt="">
+
+            <ul class="hotels-list">
+              <li class="hotel-card">
+                <a class="hotel-card-link" href="#">
+                  <img class="hotel-card-image" src="./images/hotel-1.jpg" width="300" height="211" alt="">
+                  <h3 class="hotel-card-title">Amara Resort & Spa</h3>
                 </a>
-                <a class="product-card-title-link" href="">
-                  <h3 class="product-card-title">Amara Resort & Spa</h3>
-                </a>
-                <div class="product-card-details">
-                  <div class="product-card-row">
-                    <div class="product-type">Гостиница</div>
-                    <div class="product-price">От 4000 ₽</div>
+                <div class="hotel-card-details">
+                  <div class="hotel-card-row">
+                    <div class="hotel-type">Гостиница</div>
+                    <div class="hotel-price">От 4000 ₽</div>
                   </div>
-                  <div class="product-card-row">
-                    <a class="button product-details" href="#">Подробнее</a>
-                    <button class="button product-favourites button-second" type="button" name="favourites">В
+                  <div class="hotel-card-row">
+                    <a class="button hotel-details" href="#">Подробнее</a>
+                    <button class="button hotel-favourites button-second" type="button" name="favourites">В
                       избранное</button>
                   </div>
-                  <div class="product-card-row">
-                    <div class="product-card-stars">
+                  <div class="hotel-card-row">
+                    <div class="hotel-card-stars">
                       <span class="visually-hidden">Рейтинг - 4 звезды.</span>
-                      <img class="product-stars" src="./images/product-star.svg" width="18" height="17" alt="">
-                      <img class="product-stars" src="./images/product-star.svg" width="18" height="17" alt="">
-                      <img class="product-stars" src="./images/product-star.svg" width="18" height="17" alt="">
-                      <img class="product-stars" src="./images/product-star.svg" width="18" height="17" alt="">
+                      <img class="hotel-stars" src="./images/product-star.svg" width="18" height="17" alt="">
+                      <img class="hotel-stars" src="./images/product-star.svg" width="18" height="17" alt="">
+                      <img class="hotel-stars" src="./images/product-star.svg" width="18" height="17" alt="">
+                      <img class="hotel-stars" src="./images/product-star.svg" width="18" height="17" alt="">
                     </div>
-                    <a class="button product-rating button-rating">Рейтинг: 8,5</a>
+                    <a class="button hotel-rating button-rating">Рейтинг: 8,5</a>
                   </div>
+                </div>
               </li>
-              <li class="product-card">
-                <a class="product-card-link" href="product.html">
-                  <img class="product-card-image" src="./images/hotel-2.jpg" width="300" height="211" alt="">
+              <li class="hotel-card">
+                <a class="hotel-card-link" href="#">
+                  <img class="hotel-card-image" src="./images/hotel-2.jpg" width="300" height="211"
+                    alt="Зелёные предгорья и жёлтая гора на фоне облаков и радуги.">
+                  <h3 class="hotel-card-title">Villas at Poco Diablo</h3>
                 </a>
-                <a class="product-card-title-link" href="">
-                  <h3 class="product-card-title">Villas at Poco Diablo</h3>
-                </a>
-                <div class="product-card-details">
-                  <div class="product-card-row">
-                    <div class="product-type">Гостиница</div>
-                    <div class="product-price">От 5000 ₽</div>
+                <div class="hotel-card-details">
+                  <div class="hotel-card-row">
+                    <div class="hotel-type">Гостиница</div>
+                    <div class="hotel-price">От 5000 ₽</div>
                   </div>
-                  <div class="product-card-row">
-                    <a class="button product-details" href="#">Подробнее</a>
-                    <button class="button product-favourites button-second" type="button" name="favourites">В
-                      избранное</button>
+                  <div class="hotel-card-row">
+                    <a class="button hotel-details" href="#">Подробнее</a>
+                    <button class="button hotel-favourites hotel-favourites-checked button-favourites" type="button"
+                      name="favourites">В избранном</button>
                   </div>
-                  <div class="product-card-row">
-                    <div class="product-card-stars">
+                  <div class="hotel-card-row">
+                    <div class="hotel-card-stars">
                       <span class="visually-hidden">Рейтинг - 4 звезды.</span>
-                      <img class="product-stars" src="./images/product-star.svg" width="18" height="17" alt="">
-                      <img class="product-stars" src="./images/product-star.svg" width="18" height="17" alt="">
-                      <img class="product-stars" src="./images/product-star.svg" width="18" height="17" alt="">
-                      <img class="product-stars" src="./images/product-star.svg" width="18" height="17" alt="">
+                      <img class="hotel-stars" src="./images/product-star.svg" width="18" height="17" alt="">
+                      <img class="hotel-stars" src="./images/product-star.svg" width="18" height="17" alt="">
+                      <img class="hotel-stars" src="./images/product-star.svg" width="18" height="17" alt="">
+                      <img class="hotel-stars" src="./images/product-star.svg" width="18" height="17" alt="">
                     </div>
-                    <a class="button product-rating button-rating">Рейтинг: 9,2</a>
+                    <a class="button hotel-rating button-rating">Рейтинг: 9,2</a>
                   </div>
+                </div>
               </li>
-              <li class="product-card">
-                <a class="product-card-link" href="product.html">
-                  <img class="product-card-image" src="./images/hotel-3.jpg" width="300" height="211" alt="">
+              <li class="hotel-card">
+                <a class="hotel-card-link" href="#">
+                  <img class="hotel-card-image" src="./images/hotel-3.jpg" width="300" height="211"
+                    alt="Оранжевая гора на фоне синего неба.">
+                  <h3 class="hotel-card-title">Desert Quail Inn</h3>
                 </a>
-                <a class="product-card-title-link" href="">
-                  <h3 class="product-card-title">Desert Quail Inn</h3>
-                </a>
-                <div class="product-card-details">
-                  <div class="product-card-row">
-                    <div class="product-type">Гостиница</div>
-                    <div class="product-price">От 4000 ₽</div>
+                <div class="hotel-card-details">
+                  <div class="hotel-card-row">
+                    <div class="hotel-type">Гостиница</div>
+                    <div class="hotel-price">От 2500 ₽</div>
                   </div>
-                  <div class="product-card-row">
-                    <a class="button product-details" href="#">Подробнее</a>
-                    <button class="button product-favourites button-second" type="button" name="favourites">В
+                  <div class="hotel-card-row">
+                    <a class="button hotel-details" href="#">Подробнее</a>
+                    <button class="button hotel-favourites button-second" type="button" name="favourites">В
                       избранное</button>
                   </div>
-                  <div class="product-card-row">
-                    <div class="product-card-stars">
+                  <div class="hotel-card-row">
+                    <div class="hotel-card-stars">
                       <span class="visually-hidden">Рейтинг - 3 звезды.</span>
-                      <img class="product-stars" src="./images/product-star.svg" width="18" height="17" alt="">
-                      <img class="product-stars" src="./images/product-star.svg" width="18" height="17" alt="">
-                      <img class="product-stars" src="./images/product-star.svg" width="18" height="17" alt="">
+                      <img class="hotel-stars" src="./images/product-star.svg" width="18" height="17" alt="">
+                      <img class="hotel-stars" src="./images/product-star.svg" width="18" height="17" alt="">
+                      <img class="hotel-stars" src="./images/product-star.svg" width="18" height="17" alt="">
                     </div>
-                    <a class="button product-rating button-rating">Рейтинг: 6,9</a>
+                    <a class="button hotel-rating button-rating">Рейтинг: 6,9</a>
                   </div>
+                </div>
               </li>
-              <li class="product-card">
-                <a class="product-card-link" href="product.html">
-                  <img class="product-card-image" src="./images/hotel-4.jpg" width="300" height="211" alt="">
+              <li class="hotel-card">
+                <a class="hotel-card-link" href="#">
+                  <img class="hotel-card-image" src="./images/hotel-4.jpg" width="300" height="211"
+                    alt="Красная гора на фоне звёздного неба">
+                  <h3 class="hotel-card-title">GreenTree Inn</h3>
                 </a>
-                <a class="product-card-title-link" href="">
-                  <h3 class="product-card-title">GreenTree Inn</h3>
-                </a>
-                <div class="product-card-details">
-                  <div class="product-card-row">
-                    <div class="product-type">Гостиница</div>
-                    <div class="product-price">От 1500 ₽</div>
+                <div class="hotel-card-details">
+                  <div class="hotel-card-row">
+                    <div class="hotel-type">Гостиница</div>
+                    <div class="hotel-price">От 1500 ₽</div>
                   </div>
-                  <div class="product-card-row">
-                    <a class="button product-details" href="#">Подробнее</a>
-                    <button class="button product-favourites button-second" type="button" name="favourites">В
+                  <div class="hotel-card-row">
+                    <a class="button hotel-details" href="#">Подробнее</a>
+                    <button class="button hotel-favourites button-second" type="button" name="favourites">В
                       избранное</button>
                   </div>
-                  <div class="product-card-row">
-                    <div class="product-card-stars">
+                  <div class="hotel-card-row">
+                    <div class="hotel-card-stars">
                       <span class="visually-hidden">Рейтинг - 2 звезды.</span>
-                      <img class="product-stars" src="./images/product-star.svg" width="18" height="17" alt="">
-                      <img class="product-stars" src="./images/product-star.svg" width="18" height="17" alt="">
+                      <img class="hotel-stars" src="./images/product-star.svg" width="18" height="17" alt="">
+                      <img class="hotel-stars" src="./images/product-star.svg" width="18" height="17" alt="">
                     </div>
-                    <a class="button product-rating button-rating">Рейтинг: 5,0</a>
+                    <a class="button hotel-rating button-rating">Рейтинг: 5,0</a>
                   </div>
-              </li>
+                </div>
+            </ul>
+
             </ul>
             <!-- пагинация -->
             <div class="pagination-container">
               <ul class="pagination">
                 <li class="pagination-item pagination-item-selected">
+                  <span class="visually-hidden">1 страница.</span>
                   <a class="pagination-link pagination-link-selected">1</a>
                 </li>
                 <li class="pagination-item">
+                  <span class="visually-hidden">2 страница.</span>
                   <a class="pagination-link button-second" href="#">2</a>
                 </li>
                 <li class="pagination-item">
-                  <a class="pagination-link" href="#">3</a>
+                  <span class="visually-hidden">3 страница.</span>
+                  <a class="pagination-link button-second" href="#">3</a>
                 </li>
                 <li class="pagination-item">
-                  <a class="pagination-link" href="#">4</a>
+                  <span class="visually-hidden">4 страница.</span>
+                  <a class="pagination-link button-second" href="#">4</a>
                 </li>
                 <li class="pagination-item">
-                  <a class="pagination-link" href="#">...</a>
+                  <span class="visually-hidden">Другие страницы.</span>
+                  <a class="pagination-link button-second" href="#">...</a>
                 </li>
                 <li class="pagination-item">
-                  <a class="pagination-link" href="#">10</a>
+                  <a class="pagination-link button-second" href="#">10</a>
                 </li>
               </ul>
-              <p class="select-control-title">Гостиниц на странице:</h2>
+              <p class="select-control-title">Гостиниц на странице:</p>
                 <select class="select-control">
                   <option value="Page-one">1</option>
                   <option value="Page-one">2</option>
@@ -373,7 +382,7 @@
           <!-- подписка на рассылку -->
           <section class="newsletter-catalog">
             <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
-            <p class="newsletter-text">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
+            <p class="newsletter-text newsletter-text-catalog">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
             <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
               <label>
                 <span class="visually-hidden">email.</span>
