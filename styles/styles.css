@@ -765,34 +765,52 @@ img {
 }
 
 .arrival-label {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: label-date-arrival;
 }
 
 .arrival-field {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 5;
   grid-area: date-arrival;
 }
 
 .departure-label {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
   grid-area: label-date-departure;
 }
 
 .departure-field {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 5;
   grid-area: date-departure;
 }
 
 .adults-label {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
   grid-area: label-guests-adults;
 }
 
 .adults-field {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
   grid-area: guests-adults;
 }
 
 .kids-label {
+  -ms-grid-row: 5;
+  -ms-grid-column: 5;
   grid-area: label-guests-kids;
 }
 
 .field-kids {
+  -ms-grid-row: 5;
+  -ms-grid-column: 7;
   grid-area: guests-kids;
 }
 
@@ -1000,7 +1018,8 @@ img {
 .field-kids::-webkit-inner-spin-button,
 .adults-field::-webkit-outer-spin-button,
 .adults-field::-webkit-inner-spin-button {
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   margin: 0;
 }
 
@@ -1132,6 +1151,9 @@ img {
 
 /* "найти" модального окна */
 .modal-button {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 7;
   grid-area: modal-button;
   padding: 12px 24px;
   font-size: 20px;
@@ -1407,7 +1429,8 @@ img {
 
 .catalog-filters-group-price input::-webkit-outer-spin-button,
 .catalog-filters-group-price input::-webkit-inner-spin-button {
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   margin: 0;
 }
 
@@ -1546,7 +1569,8 @@ img {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   background-image: url("../images/arrow-down.svg");
   background-position: right 18px center;
   background-repeat: no-repeat;
@@ -1780,6 +1804,7 @@ img {
 .pagination-item:focus{
   background-color: #68a2ca;
 }
+
 /* отступ между страницами */
 .pagination-item:not(:last-child) {
   margin-right: 8px;
@@ -1842,7 +1867,8 @@ img {
   line-height: 21px;
   color: #333333;
   padding: 12px 19px;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   background-image: url("../images/arrow-down.svg");
   background-position: right 18px center;
   background-repeat: no-repeat;
